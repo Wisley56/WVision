@@ -68,14 +68,14 @@ O **WVision** simula uma plataforma de gestão de um cinema, permitindo que usu�
  ├── js/
  │    └── load_components.js
  │
- ├── css/
- │    └── style.css
+ ├─── style.css
  │
- ├── ├── film.html
- │    ├── rooms.html
- │    ├── register_session.html
- │    ├── tickets.html
- │    └── list_sessions.html
+ ├─── film.html
+ ├─── index.html
+ ├─── rooms.html
+ ├─── register_session.html
+ ├─── tickets.html
+ ├─── session.html
 ```
 ## 🧪 Como testar
 Clone o repositório ou baixe o ZIP
