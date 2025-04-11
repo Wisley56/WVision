@@ -52,6 +52,7 @@ O **WVision** simula uma plataforma de gestão de um cinema, permitindo que usu�
 ## 🗂️ Estrutura do Projeto
 
 ```bash
+ ├─── index.html
 📁 src/
  ├── controllers/
  │    ├── film_controller.js
@@ -71,7 +72,6 @@ O **WVision** simula uma plataforma de gestão de um cinema, permitindo que usu�
  ├─── style.css
  │
  ├─── film.html
- ├─── index.html
  ├─── rooms.html
  ├─── register_session.html
  ├─── tickets.html
