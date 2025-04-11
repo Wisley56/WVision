@@ -75,7 +75,7 @@ O **WVision** simula uma plataforma de gestão de um cinema, permitindo que usu�
  ├─── rooms.html
  ├─── register_session.html
  ├─── tickets.html
- ├─── list_sessions.html
+ ├─── session.html
 ```
 ## 🧪 Como testar
 Clone o repositório ou baixe o ZIP
