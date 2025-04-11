@@ -7,9 +7,12 @@ async function loadComponent(id, file) {
     }
 }
 
+const isSrc = window.location.pathname.includes('/src/');
+const basePath = isSrc ? '../' : './';
+
 window.addEventListener('DOMContentLoaded', () => {
-    loadComponent('navbar-container', 'html/navbar.html');
-    loadComponent('footer-container', 'html/footer.html');
+  loadComponent('navbar-container', `${basePath}src/html/navbar.html`);
+  loadComponent('footer-container', `${basePath}src/html/footer.html`);
 });
 
 function setActiveNavLink() {
