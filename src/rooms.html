@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <title>Salas</title>
+</head>
+
+<body>
+  <div id="navbar-container"></div>
+
+  <main class="bg-dark text-white min-vh-100 py-5">
+    <div class="container text-center">
+      <h1 class="mb-4">🎥 Cadastro de Salas</h1>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalRoom">
+        <i class="bi bi-plus-circle"></i> Cadastrar Nova Sala
+      </button>
+    </div>
+
+    <!-- Modal Formulário-->
+    <div class="modal fade" id="modalRoom" tabindex="-1" aria-labelledby="modalRoomLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-dark">
+          <form id="roomForm">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalRoomLabel">Cadastrar Sala</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="name" class="form-label">Nome da Sala</label>
+                <input type="text" class="form-control" id="name" placeholder="Ex: Sala A" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="capacity" class="form-label">Capacidade</label>
+                <input type="number" class="form-control" id="capacity" placeholder="Ex: 120" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="type" class="form-label">Tipo</label>
+                <select class="form-select" id="type" required>
+                  <option disabled selected>Escolha um tipo...</option>
+                  <option value="2D">2D</option>
+                  <option value="3D">3D</option>
+                  <option value="IMAX">IMAX</option>
+                </select>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-success">Salvar</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="container mt-5">
+      <h3 class="text-white">Salas Cadastradas</h3>
+      <div class="table-responsive">
+        <table class="table table-dark table-hover mt-3">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Capacidade</th>
+              <th>Tipo</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="tableBodyRooms">
+            <!-- Linhas geradas via JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Modal de Confirmação -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-success text-white">
+          <div class="modal-header">
+            <h5 class="modal-title" id="successModalLabel">
+              <span id="successModalTitle"> Sala Cadastrada</span>
+            </h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body" id="successModalBody">
+            Sala foi registrada com sucesso!
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-light" data-bs-dismiss="modal">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal de Confirmação de Exclusão -->
+    <div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-danger text-white">
+          <div class="modal-header">
+            <h5 class="modal-title" id="confirmDeleteModalLabel"><i class="bi bi-exclamation-triangle-fill"></i> Confirmar Exclusão</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body">
+            Tem certeza que deseja excluir esta sala?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-dark" id="btnConfirmDeleteRoom">Excluir</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <div id="footer-container"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="/src/js/load_components.js"></script>
+  <script type="module" src="/src/controllers/room_controller.js"></script>
+</body>
+
+</html>

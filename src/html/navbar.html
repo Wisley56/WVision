@@ -1,0 +1,60 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/src/index.html">
+            <img src="/img/logo_WVison_dark_sem_fundo.png" alt="logo" width="90" height="96" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/src/index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/src/film.html">Filmes</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Sessões
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/src/register_session.html">Cadastrar Sessão</a></li>
+                        <li><a class="dropdown-item" href="/src/session.html">Sessões Disponíveis</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/src/rooms.html" tabindex="-1">Salas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/src/tickets.html" tabindex="-1">Ingressos</a>
+                </li>
+            </ul>
+            <form class="d-flex" id="formSearchMovie">
+                <input id="inputSearchMovie" class="form-control me-2" type="search" placeholder="Buscar em Local Storage" aria-label="Search">
+                <button class="btn btn-outline-primary btn-search" type="submit">Buscar</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div class="modal fade" id="modalSearchResult" tabindex="-1" aria-labelledby="modalSearchResultLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-dark">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalSearchResultLabel">Resultado da Busca</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body" id="modalSearchContent">
+          <!-- conteúdo gerado dinamicamente -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+</div>
+  

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Sessões</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body>
+  <div id="navbar-container"></div>
+
+  <main class="bg-dark text-white py-5 min-vh-100">
+    <div class="container">
+      <h1 class="mb-4 text-center">🎬 Sessões Cadastradas</h1>
+
+      <div class="form-check form-switch mb-4">
+        <input class="form-check-input" type="checkbox" id="toggleFuture">
+        <label class="form-check-label" for="toggleFuture">Mostrar apenas sessões disponíveis</label>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table table-dark table-hover text-white">
+          <thead>
+            <tr>
+              <th>Filme</th>
+              <th>Sala</th>
+              <th>Data e Hora</th>
+              <th>Preço</th>
+              <th>Idioma</th>
+              <th>Formato</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="sessionTableBody">
+            <!-- JS preenche aqui -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-container"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/src/js/load_components.js"></script>
+  <script type="module" src="/src/controllers/list_sessions_controller.js"></script>
+</body>
+
+</html>
