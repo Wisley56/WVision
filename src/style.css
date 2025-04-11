@@ -1,0 +1,121 @@
+:root {
+    --primary-color: #007bff;
+    --gray-dark: #343a40;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #FF003C;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --black: #000;
+    --gray: #6c757d;
+    --secondary-color: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+}
+
+body {
+    background-color: #212529;
+}
+
+#carouselCaptions, #carouselInfo {
+    margin-inline: 16px;
+}
+
+#carouselCaptionsInfo .carousel-control-prev,
+#carouselCaptionsInfo .carousel-control-next {
+    display: none;
+}
+
+.carousel-inner {
+    border-radius: 12px;
+}
+
+.card {
+    max-width: 700px;
+    margin: auto;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+  
+.card img {
+    height: 300px;
+    object-fit: cover;
+    width: 100%;
+    display: block;
+}
+  
+.card-body {
+    padding: 1rem;
+    text-align: start;
+}
+  
+  
+.card:hover {
+    transform: scale(1.03);
+}
+
+.session-container {
+    background-color: rgba(22, 22, 22, 0.75);
+    border-radius: 15px;
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.select2-container--default .select2-selection--single {
+    background-color: #212529;
+    color: white;
+    border: 1px solid #6c757d;
+}
+
+.select2-results__option img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+    color: white;
+}
+
+.select2-selection__rendered img {
+    display: none !important;
+}
+
+table img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#ticketForm {
+    margin-inline: 16px;
+}
+
+.btn[disabled] {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+  
+.copyright {
+    color: var(--white);
+}
